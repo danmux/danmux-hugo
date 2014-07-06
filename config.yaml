@@ -1,0 +1,10 @@
+---
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "../public"
+indexes:
+  category: "categories"
+baseurl: "http://danmux.com"
+title: "Dans Stuff"
+pygmentsstyle: "native"
+...
