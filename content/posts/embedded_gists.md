@@ -1,7 +1,7 @@
 ---
 title: "Embedded Gists"
 description: "Perhaps it is better to embed gists than have inline markup in blog posts."
-date: "2014-07-06"
+date: "2014-07-05"
 categories: 
     - "tech"
     - "github"
