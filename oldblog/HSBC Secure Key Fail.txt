@@ -1,0 +1,46 @@
+HSBC Secure Key Fail
+
+Posted on 17. Aug, 2011 by Dan in banking, finance, HSBC, News
+
+HSBC’s ill advised secure key roll out demonstrates how far away banks are from their customers.
+
+The desire to increase security of online banking is valid of course, though the fraud numbers are tiny and falling. Online banking fraud is also a fraction of what old paper based and cheque fraud was. (*reference needed)
+
+To introduce a new, admittedly enhanced, security measure which adds disproportionate pain to the already painful online banking experience shows how big the gulf is. Not understand how annoying, frustrating time consuming and utterly uncool these devices are is a symptom of the growing gap between banks and their customers.
+
+At least HSBC could have taken the smarter compromise and enabled the SecureKey for initial set up of money transfers and bill payments, as others have done. If they did this they could even keep their add campaign
+
+As pointed out by others there are ever improving mobile based authentication algoritms which would be cheeper, more innovative and forward facing. I know not everyone has a smart phone yet, but smart phone sales growth is incredible, so they will soon. Perhaps HSBC and others, if not prepared to innovate themselves, should adopt an ‘active waiting’ strategy.
+
+Recently, like some kind of wide eyed innocent child, ‘the media’ has been taken aback that technology (social sites) can be used to do harm (riots). Will the media be equally dumb struck when they see these same channels influence security policy at one of the worlds biggest banks.
+
+Can a large institution really bow to the wisdom of the crowds, or in other words do what they’re customers are asking? Can they admit they have got it wrong (again)?
+
+I hope so, but of course I am biased – this technology puts the kibosh on our service for HSBC! ;)
+
+Below are a few links to articles and groups of dissatisfied customers:
+
+Chris Skinners more considered post…
+
+http://thefinanser.co.uk/fsclub/2011/08/hsbc-stumble-with-secure-key.html
+
+This is money…
+http://www.thisismoney.co.uk/money/saving/article-2025682/HSBC-customers-complain-extra-security-calculator-key-online-banking.html
+
+Check out the comments…
+http://money-watch.co.uk/8224/hsbc-secure-key
+
+400 signatures and counting…
+http://www.petitionbuzz.com/petitions/hsbc
+
+Some Facebook users closing HSBC accounts…
+http://www.facebook.com/pages/Scrap-the-HSBC-Secure-Key/220553231298352
+
+More forum posts on the issue…
+http://forums.moneysavingexpert.com/showthread.php?t=3296224
+
+it is quite common to see #securekey and #fail being used in the same sentence on twitter…
+https://twitter.com/#!/search/realtime/securekey
+
+Tags: banking, fail, HSBC, online
+

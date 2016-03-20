@@ -1,0 +1,31 @@
+Software Development Hype Cycle
+
+Posted on December 9, 2011 by Dan
+I recently tweeted a banal thought (as most are) that the hype cycle could probably be applied to software development (and probably any project) as well as a technology or product.
+So I decided to jot down some thoughts about how a new project could follow that cycle.
+Gartner’s Hype Cycle is well known and probably overused, but if you are not familiar with it then wikipedia has it well summarised.
+And the chart is shown below…
+Gartners Hype Cycle
+Technology Trigger
+You or your boss or marketing or whoever has a cool new idea, you are convinced it will change peoples lives for the better and make you rich at the same time, and most folk agree. (In a big company this is probably the hardest bit – committed project sponsors – in a startup this is the easiest bit!)
+Peak of Inflated Expectations
+You fill whiteboards and are excited about all the problems you have identified.
+The risks appear to be small enough to deal with. You spike stuff, you’re throwing out tons of cool investigatory code.
+Playing with new frameworks and gadgets.
+Tin is being bought, the team is solving problems, everyone is chatty in the scrums, the repo is tidy, tests are passing, refactoring is quick and clean.
+You’ve released some stuff that folk can use.
+Everyone loves you.
+Trough of disillusionment
+The project grows, so does the code base, and branches, the exploratory code has long ago been production-ised, you are wading through a morass of story cards, more keep appearing, and no-one knows what ‘finished’ is.
+Deployments keep catching you out.
+One half of each pair is hanging out in the kitchen more than usual, you spend more time bringing the new guy up to speed (since a coupla guys left) checkins need careful coordination, 10% of your time is spent fixing conflicts.
+The beta code is being hit by a few folk internally – mainly to complain, the business wonders why things are going so slowly.
+‘Da Management’ starts to distance itself.
+Slope of Enlightenment
+The build environment is stable, coverage is good, sprints are hitting a rhythm, the team has gelled, refactoring is quick and easy, discipline is good, daily checkins are working fine, conflicts are minimal, stand ups are positive and productive.
+You’ve got some stable features out, feedback is constructive, there’s talk of release dates.
+Marketing start to care again.
+Plateau of Productivity
+Things are rolling, customers are using your code, the releases are cruising, development is 10% of the energy, its mainly sales support and maintenance, you are working in new features and fixes easily, sales are strong, the project is paying its way.
+Everyone is happy, except you…..you want a new project to work on!
+Posted in code, fun, techy	| Tagged development, management, software	| Leave a comment

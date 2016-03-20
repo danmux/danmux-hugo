@@ -1,0 +1,42 @@
+Yodlee's Rose Tinted Research
+
+Posted on 11. Aug, 2010 by admin in News, finance
+
+Recent research by Yodlee indicates a much higher demand in the UK for online personal finance management than I have experienced, and that leads me to question wether Yodlees recent study of 500 people is meaningfull.
+First of all let me qualify my ‘experience’… My direct experience comes from running the small scale online application www.wehuhu.co.uk. I have also been watching this PFM space for a few years, and have some hearsay numbers on Kublax’s demise and seen Wesabe’s fall from grace.
+My feeling is that if the demand was as high as Yodlee suggest, then there would probably be more success in the UK than there is. One thing I am quite sure of is that Yodlees numbers hide some detail, for example, of the people who say they would like to manage their money in one place, how many actually would. One thing I, Kublax, and Wesabe have suffered from is that even the smallest technical hurdle is a barrier to the average consumer.
+Part of the reason Kublax failed in the UK is because of Yodlee’s immature support for UK banks, and the problems that consumers faced with the service including duplicate transactions. Wesabe and me suffered from a clunky browser plugin, or manual file upload. It would not surprise me that of the slightly more than 50% respondents who claim they would want to use an aggregation service, when faced with some less than optimal user experience, some technical difficulty, or fully realise the security implications, the real number of active users would be more like 10% of those 50%.
+Of course my ‘experience’ is no more valuable in a scientific sense than Yodlees statistically poor sample of 500 respondents, but I have read a body of similar research (like Fiserv’s questionnaire), which puts the number of people who might trust an organisation that is not a bank with their data, closer to 20% than the 40% the report suggests.
+So whilst I and Yodlee would like to think the numbers were as high as the report suggests, my guess is that while the report may be a fair representation of the respondents opinion, it hides the reality of how many people will actually use account aggregation services.
+http://www.finextra.com/News/Fullstory.aspx?newsitemid=21691
+Tags: banking, finance, online
+
+
+
+
+Mobile Banking App Released
+Posted on 09. Aug, 2010 by admin in Android, News, banking, m-banking, mobile
+Last night the first Android Money Toolkit application was released to the Android Marketplace.
+If you are using your phone browser now you can click this link and open it in the android market.
+If you are on a computer, and have your Android device handy with a barcode (or Qrcode) scanner installed, then scan this..
+QrCode to scan to take you to the Android market
+…and choose to open it in the Android Market.
+A couple of screen shots from the application. I’ll be uploading a video tour soon.
+The home screen…
+Home screen of the Android mobile banking app
+List of accounts…
+List of accounts
+List of transactions for an account…
+List of tansactions
+Tags: first direct, mobile banking, smile
+
+
+Tags
+Android article bank banking banks bbc blog finance first direct first direct bank Mint mobile banking money News online pfm security smile smile bank startup trust wesabe
+Twitter
+First fully bank built Android bank app in the world?? http://www.geekzone.co.nz/content.asp?contentid=9340 1690 days ago
+NatWest users if your account is not syncing - log into your bank and see if there is a message for you. 1690 days ago
+@mobilemandan we use it :) check our twitter feed and getsatisfaction for some user feedback 1699 days ago
+@Peakfellrunner So good to hear feedback like that. Thanks a million. 1706 days ago
+@WebBasedWorking Sadly not yet, still backed up getting the current services spot on. Halifax still next on the plan... http://goo.gl/3S0xk 1706 days ago
+Follow us on Twitter
