@@ -17,7 +17,7 @@ categories:
 The Pyramid and Dificult Compromises
 -------------
 
-My understanding of Cohns original article was that people too often downplay the service or integration tests, and I think discussions of the pyramid miss this emphasis, and have focused too much on the Pyramid itself.
+Moi understanding of Cohns original article was that people too often downplay the service or integration tests, and I think discussions of the pyramid miss this emphasis, and have focused too much on the Pyramid itself.
 
 Unit vs X Tests (where X = any name for anything other than Unit)  must be the most tiresome debate ever in the history of software development. Over the years I have often found myself encouraging and sometimes justifying my compromises. My arguments have never been devastatingly good, because like any engineering there are often many good enough ways to achieve the desired outcome.
 

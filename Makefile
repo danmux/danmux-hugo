@@ -1,15 +1,13 @@
-dev_folder = $(abspath $(CURDIR)/../..)
+dev_folder = $(abspath $(CURDIR)/..)
 
-hugo_folder = $(dev_folder)/danmux-hugo/source
 repo_folder = $(dev_folder)/danmux.github.com
-pub_folder = $(dev_folder)/danmux-hugo/public
+pub_folder = $(dev_folder)/public
 
 run:
 	hugo server --buildDrafts --watch --verbose=true
 
 build:
-	
-	hugo
+	hugo -d $(pub_folder)
 	cp -R $(pub_folder)/* $(repo_folder)
 
 deploy: build
