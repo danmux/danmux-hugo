@@ -4,119 +4,65 @@ description: "Consumer banking still struggles with its online identity."
 date: "2011-09-23"
 categories: 
     - "tech"
-    - "testing"
-    - "development"
-    - "engineering"
-    - "quality"
+    - "banks"
+    - "apis"
 ---
 
-[The test pyramid](https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid) has its place - it gets across a simple idea, but it has been taken too literally, and applied innapropriately.
+This past week saw two of the biggest banking and financial innovation conferences take place, Sibos and Finovate. On following a few Twitter streams of a few attendees, a new meme started to appear – possibly a bit premature to call it a meme and incorrect to call it new, but none the less the concept is valid if a bit bank-geeky.
+
+Borrowing from the Web 2.0 catchall or marketing label for anything more interactive than the static Web 1.0 but less linked than the evolving beb of data (Web 3.0?) the banking innovation consultant, speaker and author Brett King has coalesced thoughts and ideas around the next generation of consumer banking and published them in his popular book – Bank 2.0
 
 <!--more-->
 
-The Pyramid and Dificult Compromises
--------------
+Web 2.0
+-------
 
-Moi understanding of Cohns original article was that people too often downplay the service or integration tests, and I think discussions of the pyramid miss this emphasis, and have focused too much on the Pyramid itself.
+By borrowing the Web 2.0 concept, Bank 2.0 for those on the bank – web tech boundary conveys some immediate meaning.
 
-Unit vs X Tests (where X = any name for anything other than Unit)  must be the most tiresome debate ever in the history of software development. Over the years I have often found myself encouraging and sometimes justifying my compromises. My arguments have never been devastatingly good, because like any engineering there are often many good enough ways to achieve the desired outcome.
+Using version numbers to try and capture a few ideas around something as amorphous as web technology soon led to various tongue in cheek references to Web 1.5 for half hearted attempts to wejazzle up web sites with a splash of ajax. There was a lot of talk of porcine cosmetics, and whilst the more hardcore Web 2.0 crowd exclaimed “you can’t polish a turd” – referencing the broken underlying technology, other more optimistic folk responded with “no, but you can roll it in glitter”
 
-'Good enough' is at the heart of all engineering. Good enough to manage the risks with just enough confidence. From past experience I have, in general, found that developers from a computer science background sometimes struggle with 'engineering compromise' more than those from an engineering background.
+I’ve no doubt that the glittering of the web detracted from the real shift that was taking place, possibly slowed and even damaged broader progress, but for a comercial business to stay current and competitive it was a fair transitionary compromise.
 
-Judging good enough and risk is hard and takes confidence and experience to get the balance right in the many different projects and products we work within. A set of tried and tested prescriptions is always more straight forward. 
+The shift to Web 2.0 peaked around 10 years ago and began years before that and there is now a strongly swelling tide building to the the next wave of the web of linked data and of course mobile. The journey to bank 2.0 however only really started in 2005 when Aaron Patzer started working on Mint.com, and some US banks started rolling out some personal finance features.
 
-The Base of the Pyramid Problem
--------------------------------
+Banks are in the throws of the first phase of the journey – Banks are are rolling turds in glitter, they are at Bank 1.X (where 0 < X < 2) Some even say that banks have not even reached Bank 1.00 but we have to mark our datum somewhere.
 
-It is way too prescriptive:
+For the web to evolve into Web 2.0 it took a concerted global vertical technology stack refresh, from the improving hardware (thanks Moore) with httpd evolving to the more plug-able Apache through efficient (to code) programming languages through wider pipes with the growth in always connected broadband, up to Javascript (and the proprietary Flash), better home computing and tighter more open browsers.
 
-* It oversimplifies the situation, so it is used as a crutch to avoid critical thinking (notice I avoided the phrase containing the word 'cargo'). How often would 70:20:10 be perfect for your situation. 
-* The top of the pyramid refers explicitly to GUI based tests, often irrelevant, often the people who mention it forget this. (However, even a testing trapezoid would still be wrong)
-* True user testing is completely ignored - experience - emotion - engagement (Dare I say quality as [Persig](https://en.wikipedia.org/wiki/Zen_and_the_Art_of_Motorcycle_Maintenance) defines it "Quality is the knife-edge of experience, found only in the present, known or at least potentially accessible to all of us")
-* It is based on the false assumption that integration tests are slow and flaky, they can be as fast and robust as unit tests.
-* It is 4 years old - the world has turned. Modern GUI's (think Mobile and [SPA](https://en.wikipedia.org/wiki/Single-page_application)) are almost always cleanly divided by a well defined API. (if not then it's not a testing problem, but a design problem)
-* It downplays the relevance of boundary interactions, particularly during concurrency.
-* Unit tests are subject to availability bias - and take on an inflated importance because of it.
-* Unit tests themselves are a kind of availability bias - because they are easy to write and run they are used in the place of a more difficult, more complex, more valuable strategy, one that only becomes clear when you critically assess the real risks affecting quality. 
 
-An Illustration of Broken Thinking
-----------------------------------
-The article most cited to me is the well read [Test Pyramid](http://martinfowler.com/bliki/TestPyramid.html) by Martin Fowler which references the original Mike Cohn article, [The Forgotten Layer of the Test Automation Pyramid](https://www.mountaingoatsoftware.com/blog/the-forgotten-layer-of-the-test-automation-pyramid) 
+Open Innovation
+---------------
 
-Martins post links to another well known supporting article from the Google Testing Blog with the deliberately captivating title...
+The reason that could happen so comparatively quickly – it was open. This is the very reason why Banks will not adopt the same path or pace. The seismic shift in the internet took billions of collaborative hours enabled by the nature of the internet itself and by the passion of the people to defend against any individual corporate land grab.
 
-[Just Say No to More End-to-End Tests](http://googletesting.blogspot.ch/2015/04/just-say-no-to-more-end-to-end-tests.html)
 
-Which captures the narrow experiences and environment of one setup with some fundamental problems. Some parts of that Google testing blog post I simply did not fully understand until a few re-reads, and even then I was left questioning the validity of what I read. I felt it sounded outdated, and was based on some strange assumptions, it appears I am not alone.
+TBL
+---
 
-A counterpoint is posted on Martin’s post, which is also worth reading: [Making End-to-End Tests Work](https://www.symphonious.net/2015/04/30/making-end-to-end-tests-work/) which succinctly points out some limitation of the test system mentioned in the Google testing blog post above...
+The banks have a similar scale problem to solve, but they dont have an open infrastructure, they dont have an inter-net, they have a large closed global intra-net curated by a cartel of self interested owners which is deeply rooted in and protected by the governments that helped create this razor wired garden. This situation isn’t all bad, and I dont know if there could have been a realistic alternative, or if there will be. Time will tell if a decentralised none homogenous system of many parts can unseat the incumbent system, if it can, it will take many more years. I suspect that the global legislative innovation antibodies may win this one. Though having said that there are some strong network effects at play here with telcos and social networks picking at openings.
 
-> "If your idea of fantastic test infrastructure starts with the words “every night” and ends with an email being sent you’re doomed"
+Bigger than all of this is perhaps the motivation for change, the internet changed because it was 10′s of thousands of people with a shared passion and vision that was well aligned with what the general public wanted, it was two sided, pull-pull, win-win. With Banks…meh!
 
-The Google post is further analytically [dismembered here](http://bryanpendleton.blogspot.com.au/2015/04/on-testing-strategies-and-end-to-end.html?m=1), and this article captures my own confusion well...
+More Layers
+-----------
 
-> "Whatever went wrong with this project, though, one thing is very clear to me:
->
-> The testing strategy is not the problem here."
+The internet is shifting into the next phase where the technology stack is getting deeper – big internet companies are doing the heavy lifting and heavy investment to encourage an eco-system of impassioned organisms to symbiotically share their hard work – to build upon the work of the host – filling a multitude of difficult to reach customer niches, and importantly drive value into the host. Platform as a service – open web based API’s, Amazon web services, EC2, Azure, Google App Engine, force.com etc. etc. the list is endless and extremely lucrative.
 
-Detail of Availability Bias
----------------------------------
-(my own pseudo science - feel free to skip to next section (but there is mention of interesting work in any case))
+Excellence Expected
+-------------------
 
-Recently I have been reading a fascinating book that has long been on my to-read list: [Kahneman's Thinking Fast and Slow](http://www.amazon.co.uk/Thinking-Fast-Slow-Daniel-Kahneman/dp/0141033576). Fortuitously Kahneman has gifted me another tool in my arsenal against the over valuing of unit tests. Availability bias.
+Apple, Amazon, Google, Facebook have driven customer expectation through the roof, particularly with respect to quality, and immediacy. What damage these pesky brilliant companies have done whilst delighting their customers! Do they realise how hard it is to hit the benchmark they have set. Do the banks realise their newer customers in particular expect no less!
 
-The over importance of unit testing may just be down to availability bias. 
+It is still true that the core banking systems need to continue to evolve and the technology refresh cycle needs to pick up for these encumbants to stay in the game, to compete or join the disruptors. That wall of legislative razor wire that constrains also protects, but time is running out.
 
-When I analyse the past encounters over the issue of unit testing vs other types of testing, I suspect this bias (or availability heuristic as it is also known) may be the main factor that tips the balance in favour of unit tests and has resulted in them appearing to be so important.
+I think it is too late for banks to continue to own the whole vertical. It is too big too fast and too difficult. Consumer expectation is moving too fast for them to make the fundamental corporate attitude shifts required to fully engage with real customers the way every recent poster child startup has. Let the front end be owned by those that ‘get it’ look at what Bank Simple is about to do, I reserve judgement but am equally optimistic about MovenBank – both have chosen not to beat the banks at their own game but build on the existing banks core competency.
 
-Whilst I can't do the book justice here, I'll try and capture the salient points. Availability bias is an example of many evolutionary shortcuts in the human mind that can substitute a simple emotional decision for an otherwise difficult complex one, and has been demonstrated in many, brilliant, simple psychological experiments.
+Towards Bank 2.0
+----------------
 
-In particular, according to Kahneman, Norbert Schwarz showed the paradox that we are less confident in our decision when asked to come up with more reasons why it is a good decision. Our brains make an overconfident emotional decision when we can immediately produce a few supporting reasons, and a less confident decision, when forced to think harder. This is one of those paradoxes which are obvious when pointed out.
+Some Banks are starting the shift already – according to that Sibos and Finovate Twitter stream – Banking as a Service is on the way. Rather than Citi knocking the stuffing out of Bank 2.0 by releasing their payment API, they took a step towards enabling bank 2.0. Mastercard does it already. If the Banks are to thrive under this next wave they need to bend and work towards helping fulfil our expectations of Bank 2.0, they need to offer the next layer up even richer access to their services and data – I mean our data.
 
-The book goes onto describe some related effects, regarding risk, which triggered my connection with testing, because I think much more in terms of risk than of test type, or test metric. Research by Paul Slovic, Sarah Lichtenstein and Baruch Fischhoff Showed that scientists opinions on the benefits of a particular technology could be increased by downplaying the risks, and similarly that the perception of the risks of a technology would be decreased, just by describing the benefits.
+We need them to loosen the grip, we need those API’s, we need Banking as a Service.
 
-It is clear how this emotional bias can be applied to software testing: 
-
-1. A lack of unit tests most often described as (and can be) a risk - therefore the benefits of unit tests are exaggerated in our minds.
-2. We can quickly recall a few examples of people who repeat the advantages of unit tests, and quickly recall a few personal experiences that support their advantage so the risks of focussing on them are downplayed.
-
-This is all based in normal animal survival laziness - it takes energy for our deep thinking brain to engage.
-
-A more direct consequence of our natural laziness also has a different type of biasing effect on the increased value attributed to unit testing. 
-
-It is hard for anyone deeply embedded in a development team to truly know how valuable the team is, or, where necessary, how valuable individual members of the team are, or even how good the product is. The situation has developed where the very people responsible for the success of a development team are some of the least likely to be able to make an objective decision. Under these conditions it is easy to see how 'measurement' is needed, it is this natural laziness that allows easy measurements to become so influential.
-
-Unit tests are easy, and the quick visibility they afford in the form of the second most harmfull metric in development - coverage, creates something measurable. This is an easy metric, and when coupled with the biases of 1 and 2 above it is easy to see how unit testing and test coverage take on a an overly exaggerated value. Perhaps most often outside of the team who writes the tests.
-
-I also think it is likely that we are still suffering the rebound from 10 years ago when test automation and unit testing were much less an integral part of the development cycle. The easiest goto tool in the interim has been the unit test.
-
-The Smart Way
--------------
-
-Whilst this post actually started out as a document of my linking availability bias with the over emphasis on unit testing and was not meant to be about the value of various tests in practice, it is probably clear that I encourage a more individually considered approach, than a set of prescribed rules.
-
-I want to make it clear that I totally understand that there are loads of cases, particularly on the computer science focussed side of development where unit tests are essentially the only sensible test strategy. But they are only one part of the package, and often a small part.
-
-In this article: [Why the Testing Pyramid is Misleading](http://www.joecolantonio.com/2015/12/09/why-the-testing-pyramid-is-misleading-think-scales/) the author discusses Todd Gardners (TrackJs) views which could be concieved to be indirectly addressing availability bias of unit tests, by making the point that we tend to not think in terms of risk. This article resonates strongly with my own approach to quality (again where quality is typically a bigger thing than that which we normally test for)
-
-That article references the video offering very sensible advice from Todd Gardner, Software Engineer and Entrepreneur at TrackJS, namely think critically...
-
-[Case Studies in Terrible Testing](https://vimeo.com/144684986)
-(slide deck [here](http://www.slideshare.net/todd3091/case-studies-in-terrible-testing))
-
-Especially salient is the advice from 25 minutes on, though this picture of the relative importance of different testing to mitigate the scale of the risks to the success of one particular project should illustrate the main thrust of the presentation...
-
-![testing scales](https://lh3.googleusercontent.com/-uyf9z1SiSgw/Vnft1EYuFaI/AAAAAAAAMlQ/j_PQhbHL-jI/w1167-d-h870-p-rw "Testing Scales")
-_Figure 1. A custom set of sliding scales of differing test strategies_
- 
-When we truly think about how we can best reduce the risk to success, and use alternative appropriate tools to manage that risk we start to focus more on delivering real value. 
-
-Monitoring, CD, and a real understanding of the users perceived value or quality through canary code, A/B testing and the like will have a much bigger impact than 70% coverage.
-
-> "Fast to fix is almost as good as never broken (and sometimes better)" 
-
-_(from Todd’s slides above)_
-
-The ‘scales of risk’ metaphor is much more intelligent and appropriate than the pyramid. The pyramid is one combination of the risk scales which may well align with a correct assignment of risk in a minority of real world cases (as would the ice cream cone). Though as far as I remember, not on any projects I have worked on.
 
 
