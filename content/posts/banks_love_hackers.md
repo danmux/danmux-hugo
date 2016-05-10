@@ -31,11 +31,15 @@ The Real Truth
 * 2011 Bank fraud in 2011:  £32 Million
 * 2006 Unpaid item Fees: £2,600 Million (81x)
 
+
+![Graph of fraud vs penalties](/img/hackers.png "wtf")
+
+
 These numbers are based on the [OFT report from 2008](http://webarchive.nationalarchives.gov.uk/20140402142426/http:/oft.gov.uk/shared_oft/reports/financial_products/OFT1005exec.pdf) – £2.6 billion in ‘unpaid item’ penaly charges during 2006 (there’s actually another £0.5billion in unauthorised overdraft fees as well). This number is probably now a tiny bit high. A more recent OFT report in 2010 show the average unpaid item fee has halved since the 2008 reports numbers, but when you factor in the other penalty fees, it won’t be far off.
 
-You know I wouldn’t be surprised if the banks didn’t like a little bit of fraud – especially if its online – then they can keep not delivering the services that would help many more people to avoid these (still) ridiculous fees and charges. I wonder if any banks have a secret ‘hacker department’ (btw I’m using hacker in the now more common ‘bad guy at a computer’ way. Not the original and (correct) meaning, as per Zuks recent misunderstood statement). Whilst the banks have cleaned up their act a bit – we must applaud them for halving the average penalty from £34 to £17 – the OFT report in 2008, provides some choice insight into why the banks like these sneaky, after the event, charges.
+You know I wouldn’t be surprised if the banks didn’t like a little bit of fraud – especially if its online – then they can keep not delivering the services that would help many more people to avoid these (still) ridiculous fees and charges. I wonder if any banks have a secret ‘hacker department’ (btw I’m using hacker in the now more common ‘bad guy at a computer’ way. Not the original and (correct) meaning, as per Zuks recent misunderstood statement). Whilst the banks have cleaned up their act a bit – we must applaud them for halving the average penalty from £34 to £17 – the OFT report in 2008, provides some choice insight into why the banks like these sneaky, after the event, charges:
 
-The lack of visibility of insufficient funds charges to consumers has reduced the incentive for the banks to compete on these aspects. As a result some banks appear to see insufficient funds charges in particular as an attractive way to generate additional revenue without affecting demand for their accounts.
+>The lack of visibility of insufficient funds charges to consumers has reduced the incentive for the banks to compete on these aspects. As a result some banks appear to see insufficient funds charges in particular as an attractive way to generate additional revenue without affecting demand for their accounts.
 
 A footnote goes into more detail: During the course of this market study, the OFT has seen banks’ internal documents on the level of charges that include statements such as: 
 
