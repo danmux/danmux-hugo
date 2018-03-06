@@ -1,7 +1,7 @@
 ---
 title: "Bazel Fawlty"
 description: "Like Basil Fawlty, Bazel promises a great deal, but makes a bit of a fuss about nothing, especially in Golang projects"
-date: "2018-03-16"
+date: "2018-03-06"
 categories: 
     - "golang"
     - "go"
@@ -13,7 +13,7 @@ categories:
     - "continuous integration"
 ---
 
-Like Basil Fawlty, Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.
+Like [Basil Fawlty](https://www.youtube.com/watch?v=mv0onXhyLlE), Bazel promises a great deal, but makes a bit of a fuss about something that could have been done so much more easily. This is at least true in any medium to large sized Golang project, it is worse if using OSX. Whilst Bazels goals are desireable they are easily and more simply achieved with the Go tools, especially since go 1.10.
 
 <!--more-->
 
@@ -126,9 +126,7 @@ Regarding build speed I think if the remote, or distributed cache would have wor
 The Reality
 -----------
 
-To set the scene, our codebase is mainly Go, including vendor directories, and a considerable amount of data compiled in, we have 2.5M lines of code, a full build from a clean clone on one of our Jenkins slaves takes 1 minute.
-
-We had between 8 and 20 engineers working on that codebase. Importantly we all develop on Mac, but run in production in linux.
+To set the scene we have a relatively large, predominantly Go codebase, and we are a medium sized team.
 
 Bazel:
 
