@@ -1,0 +1,34 @@
+id: floe
+host-tags: [linux]   # all these tags must match the tags on any host for it to be able to run there
+env:
+  - PATH=./hugo:$PATH
+ver: 1
+
+tasks:
+  - name: Checkout
+    listen: trigger.good
+    type: git-checkout
+
+  - name: Download Hugo
+    listen: task.checkout.good
+    type: fetch
+    opts:
+      url: "https://github.com/gohugoio/hugo/releases/download/v0.45/hugo_0.45_Linux-ARM64.tar.gz"
+      checksum: "bffb74c61cc4547372b924a1fef2beace0f487e0f562f79cc6bbffc2f7c27a1a"
+      checksum-algo: "sha256"
+
+  - name: Expand Hugo
+    listen: task.download-hugo.good
+    type: exec
+    opts:
+      cmd: "tar -xf hugo_0.45_Linux-ARM64.tar.gz hugo"
+
+  - name: Hugo Version
+    listen: task.expand-hugo.good
+    type: exec
+    opts:
+      shell: "hugo version"
+
+  - name: done
+    listen: task.hugo-version.good
+    type: end
