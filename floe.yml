@@ -13,7 +13,7 @@ tasks:
     listen: task.checkout.good
     type: fetch
     opts:
-      url: "https://github.com/gohugoio/hugo/releases/download/v0.45/hugo_0.45_Linux-ARM64.tar.gz"
+      url: "https://s3-eu-west-1.amazonaws.com/floe-assets/hugo_0.45_Linux-ARM64.tar.gz"
       checksum: "bffb74c61cc4547372b924a1fef2beace0f487e0f562f79cc6bbffc2f7c27a1a"
       checksum-algo: "sha256"
 
