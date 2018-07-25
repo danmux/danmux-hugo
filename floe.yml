@@ -16,12 +16,14 @@ tasks:
       url: "https://s3-eu-west-1.amazonaws.com/floe-assets/hugo_0.45_Linux-ARM64.tar.gz"
       checksum: "bffb74c61cc4547372b924a1fef2beace0f487e0f562f79cc6bbffc2f7c27a1a"
       checksum-algo: "sha256"
+      location: hugo
 
   - name: Expand Hugo
     listen: task.download-hugo.good
     type: exec
     opts:
-      cmd: "tar -xf hugo_0.45_Linux-ARM64.tar.gz hugo"
+      sub-dir: hugo
+      cmd: "tar -xf hugo_0.45_Linux-ARM64.tar.gz"
 
   - name: Hugo Version
     listen: task.expand-hugo.good
