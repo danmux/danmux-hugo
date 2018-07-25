@@ -2,7 +2,7 @@ id: floe
 host-tags: [linux]   # all these tags must match the tags on any host for it to be able to run there
 env:
   - PATH=./hugo:$PATH
-ver: 1
+ver: 2
 
 tasks:
   - name: Checkout
@@ -13,10 +13,11 @@ tasks:
     listen: task.checkout.good
     type: fetch
     opts:
+      sub-dir: hugo
       url: "https://s3-eu-west-1.amazonaws.com/floe-assets/hugo_0.45_Linux-ARM64.tar.gz"
       checksum: "bffb74c61cc4547372b924a1fef2beace0f487e0f562f79cc6bbffc2f7c27a1a"
       checksum-algo: "sha256"
-      location: hugo
+      location: hugo/  # the trailing slash means in the hugo folder
 
   - name: Expand Hugo
     listen: task.download-hugo.good
