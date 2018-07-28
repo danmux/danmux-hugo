@@ -15,8 +15,8 @@ tasks:
     type: fetch
     opts:
       sub-dir: hugo
-      url: "https://s3-eu-west-1.amazonaws.com/floe-assets/hugo_0.45_Linux-ARM64.tar.gz"
-      checksum: "bffb74c61cc4547372b924a1fef2beace0f487e0f562f79cc6bbffc2f7c27a1a"
+      url: "https://s3-eu-west-1.amazonaws.com/floe-assets/hugo_0.45.1_Linux-64bit.tar.gz"
+      checksum: "e10e4162d4d568b92e3c8b49efeb1fc3fd6310138dc5d7a63b86b852d37af158"
       checksum-algo: "sha256"
       location: hugo/  # the trailing slash means in the hugo folder
 
@@ -25,7 +25,7 @@ tasks:
     type: exec
     opts:
       sub-dir: hugo
-      cmd: "tar -xf hugo_0.45_Linux-ARM64.tar.gz"
+      cmd: "tar -xf hugo_0.45.1_Linux-64bit.tar.gz"
 
   - name: Hugo Version
     listen: task.expand-hugo.good
