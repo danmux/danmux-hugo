@@ -13,9 +13,8 @@ build:
 	hugo -d $(pub_folder)
 	cp -R $(pub_folder)/* $(repo_folder)
 
-.PHONY: build
+.PHONY: deploy
 deploy: build
-
 	git --git-dir=$(repo_folder)/.git --work-tree=$(repo_folder) add --all .
 	git --git-dir=$(repo_folder)/.git --work-tree=$(repo_folder) commit -am"releasing"
 	git --git-dir=$(repo_folder)/.git --work-tree=$(repo_folder) push

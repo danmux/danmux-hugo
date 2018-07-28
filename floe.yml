@@ -5,12 +5,13 @@ env:
 ver: 2
 
 tasks:
-  - name: Checkout
-    listen: trigger.good
-    type: git-checkout
+  # - name: Checkout
+  #   listen: trigger.good
+  #   type: git-checkout
 
   - name: Download Hugo
-    listen: task.checkout.good
+    # listen: task.checkout.good
+    listen: trigger.good
     type: fetch
     opts:
       sub-dir: hugo
