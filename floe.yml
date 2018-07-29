@@ -79,7 +79,7 @@ tasks:
     listen: task.commit.good
     type: exec
     opts:
-      git-key: "/home/ubuntu/.ssh/id_floedemo_rsa"
+      git-key: /home/ubuntu/.ssh/id_danmux-hugo_rsa
       sub-dir: danmux.github.com
       cmd: git push
 
