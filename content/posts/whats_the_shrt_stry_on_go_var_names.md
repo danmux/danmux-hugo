@@ -45,6 +45,7 @@ Also for me and many other people `n` (int) is very often an index into an array
 So given the slight trickiness ... when you look at this...
 
 ```
+
     func (b *Writer) WriteString(s string) (int, error) {
         nn := 0
         for len(s) > b.Available() && b.err == nil {
@@ -62,7 +63,7 @@ So given the slight trickiness ... when you look at this...
         nn += n
         return nn, nil
     }
-```  
+```
 
 Versus...
 
@@ -129,7 +130,7 @@ The author would prefer the following code:
         count += n
         return count, nil
     }
-```   
+```
 
 Compare to the original snippet as above...
 
@@ -151,7 +152,7 @@ Compare to the original snippet as above...
         nn += n
         return nn, nil
     }
-```  
+```
 
 ...and intuitively feel which is cleaner / clearer. Your preference may be different from mine.
 

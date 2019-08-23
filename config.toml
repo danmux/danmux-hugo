@@ -1,0 +1,23 @@
+baseURL = "https://danmux.com/"
+languageCode = "en-us"
+title = "Dans Stuff"
+theme = "solar-theme-hugo"
+pygmentsStyle = "solarized-dark" # solarized-light, -dark or -dark256
+
+[menu]
+  
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+  
+  [[menu.main]]
+    name = "Categories"
+    url = "/categories"
+  
+  [[menu.other]]
+    name = "About"
+    url = "/cv"
+
+  [[menu.other]]
+    name = "Feed"
+    url = "/index.xml"
