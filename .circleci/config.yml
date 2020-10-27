@@ -12,7 +12,7 @@ aliases:
 jobs:
   build:
     docker:
-      - image: docker:stable-git
+      - image: cimg/go:1.14
     steps:
       - run:
           name: sample name
