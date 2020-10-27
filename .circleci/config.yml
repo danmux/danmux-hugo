@@ -24,6 +24,9 @@ jobs:
           name: print processes
           command: ps -ef
       - run:
+          name: cat config
+          command: cat /.circleci-runner-config.json
+      - run:
           name: Create some test results
           command: |
             while true; do
