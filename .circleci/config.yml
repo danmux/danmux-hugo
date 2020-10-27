@@ -22,7 +22,7 @@ jobs:
           command: env
       - run:
           name: print processes
-          command: ps -ef
+          command: pgrep "circleci-agent" | xargs --no-run-if-empty ps fp
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json
