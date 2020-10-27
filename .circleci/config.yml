@@ -26,6 +26,7 @@ jobs:
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json
+      - checkout:
       - run:
           name: Create some test results
           command: |
