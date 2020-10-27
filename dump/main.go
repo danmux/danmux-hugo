@@ -2,10 +2,10 @@ package main
 
 import (
 	"log"
-	"os"
 	"strings"
 
 	"github.com/mitchellh/go-ps"
+	"github.com/shirou/gopsutil/process"
 	"github.com/davecgh/go-spew/spew"
 )
 
@@ -15,15 +15,15 @@ func main() {
 
 	for _, p := range pss {
 		if strings.Contains(p.Executable(), "circleci-agent") {
-			dumpProcess(p.Pid())
+			dumpProcess(int32(p.Pid()))
 			return
 		}
 	}
 	log.Fatal("circleci-agent not found")
 }
 
-func dumpProcess(pid int) {
-	proc, err := os.FindProcess(pid)
+func dumpProcess(pid int32) {
+	proc, err := process.NewProcess(pid)
 	noErr(err)
 
 	if proc == nil {
@@ -31,6 +31,8 @@ func dumpProcess(pid int) {
 	}
 
 	spew.Dump(proc)
+
+	log.Print(proc.Cmdline())
 }
 
 
