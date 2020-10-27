@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/davecgh/go-spew/spew"
 	"log"
 	"strings"
 
@@ -10,19 +9,26 @@ import (
 )
 
 func main() {
+	opURL := getOpURL()
+	if opURL == "" {
+		log.Fatal("circleci-agent not found")
+	}
+	log.Print("output processor is listening on: ", opURL)
+}
+
+func getOpURL() string {
 	pss, err := ps.Processes()
 	noErr(err)
 
 	for _, p := range pss {
 		if strings.Contains(p.Executable(), "circleci-agent") {
-			dumpProcess(int32(p.Pid()))
-			return
+			return getOPArg(int32(p.Pid()))
 		}
 	}
-	log.Fatal("circleci-agent not found")
+	return ""
 }
 
-func dumpProcess(pid int32) {
+func getOPArg(pid int32) string{
 	proc, err := process.NewProcess(pid)
 	noErr(err)
 
@@ -30,15 +36,15 @@ func dumpProcess(pid int32) {
 		log.Fatalf("process: %d not found", pid)
 	}
 
-
-
 	cmds, err := proc.CmdlineSlice()
     noErr(err)
 
-    spew.Dump(cmds)
-
-	// 2020/10/27 09:00:25 /bin/circleci-agent --config /.circleci-runner-config.json --task-data /.circleci-task-data --outerServerUrl https://circleci-internal-outer-build-agent:5500 _internal runner<nil>
-
+	for i, c := range cmds {
+		if c == "--outerServerUrl" {
+			return cmds[i+1]
+		}
+	}
+	return ""
 }
 
 
