@@ -16,6 +16,7 @@ jobs:
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json
+      - checkout:
       - run:
           name: dump
           command: go run ./dump
