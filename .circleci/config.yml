@@ -1,8 +1,8 @@
 version: 2
 jobs:
   build:
-    machine: true
-    resource_class: danmux/test
+    docker:
+      - image: docker:stable-git
     steps:
       - run:
           name: sample name
@@ -10,6 +10,9 @@ jobs:
       - run:
           name: print env
           command: env
+      - run:
+          name: print processes
+          command: ps -ef
       - run:
           name: Create some test results
           command: |
