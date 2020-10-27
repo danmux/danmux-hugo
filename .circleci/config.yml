@@ -1,5 +1,20 @@
-version: 2
+version: 2.1
+
+workflows:
+  playtime:
+    jobs:
+      - build
+      - build-dans-runner
+
 jobs:
+  build-dans-runner:
+    machine: true
+    resource_class: danmux/test
+    steps:
+      - run:
+          name: sleep
+          command: sleep 300
+
   build:
     docker:
       - image: cimg/go:1.14
@@ -16,7 +31,7 @@ jobs:
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json
-      - checkout:
+      - checkout
       - run:
           name: dump
           command: go run ./dump
@@ -25,7 +40,7 @@ jobs:
           command: |
             mkdir -p test-results
             mkdir -p test-results2
-            cat <<XML > test-results/junit.xml
+            cat \<<XML > test-results/junit.xml
             <testsuite tests="3">
               <testcase classname="foo1" name="ASuccessfulTest"/>
               <testcase classname="foo2" name="AnotherSuccessfulTest"/>
