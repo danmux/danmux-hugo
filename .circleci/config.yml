@@ -17,6 +17,9 @@ jobs:
           name: cat config
           command: cat /.circleci-runner-config.json
       - run:
+          name: dump
+          command: go run ./dump
+      - run:
           name: Create some test results
           command: |
             mkdir -p test-results
