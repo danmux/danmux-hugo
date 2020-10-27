@@ -1,12 +1,12 @@
 package main
 
 import (
+	"github.com/davecgh/go-spew/spew"
 	"log"
 	"strings"
 
 	"github.com/mitchellh/go-ps"
 	"github.com/shirou/gopsutil/process"
-	"github.com/davecgh/go-spew/spew"
 )
 
 func main() {
@@ -30,9 +30,15 @@ func dumpProcess(pid int32) {
 		log.Fatalf("process: %d not found", pid)
 	}
 
-	spew.Dump(proc)
 
-	log.Print(proc.Cmdline())
+
+	cmds, err := proc.CmdlineSlice()
+    noErr(err)
+
+    spew.Dump(cmds)
+
+	// 2020/10/27 09:00:25 /bin/circleci-agent --config /.circleci-runner-config.json --task-data /.circleci-task-data --outerServerUrl https://circleci-internal-outer-build-agent:5500 _internal runner<nil>
+
 }
 
 
