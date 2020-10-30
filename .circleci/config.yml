@@ -21,6 +21,9 @@ jobs:
           name: print env
           command: env
       - run:
+          name: print all env
+          command: export
+      - run:
           name: print processes
           command: pgrep "circleci-agent" | xargs --no-run-if-empty ps fp
       - run:
