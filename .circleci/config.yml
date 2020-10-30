@@ -12,6 +12,14 @@ jobs:
     resource_class: danmux/test
     steps:
       - run:
+          name: print all env
+          command: export
+
+      - run:
+          name: print env
+          command: env
+
+      - run:
           name: sleep
           command: sleep 300
 
