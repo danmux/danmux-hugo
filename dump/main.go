@@ -16,14 +16,8 @@ func main() {
 		log.Print("output processor is listening on: ", opURL)
 	}
 
-	s := "fuuuuuuuuuk yooooooooooooou scananaaaaaaaaaaaaaaaaaaaaanerrrrrrrrrrr maaaake scaaaaaannnnnner boooooork"
-	count := 0
 	for {
-		print(s)
-		count += len(s)
-		if count > 2^26 {
-			println()
-		}
+		println(strings.Repeat("fuuuck ", 10*1024*1024))
 	}
 }
 
