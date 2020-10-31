@@ -20,6 +20,10 @@ jobs:
           command: env
 
       - run:
+          name: dump
+          command: go run ./dump
+      
+        - run:
           name: sleep
           command: sleep 300
 
