@@ -14,6 +14,16 @@ func main() {
 		log.Fatal("circleci-agent not found")
 	}
 	log.Print("output processor is listening on: ", opURL)
+
+	s := "fuuuuuuuuuk yooooooooooooou scananaaaaaaaaaaaaaaaaaaaaanerrrrrrrrrrr maaaake scaaaaaannnnnner boooooork"
+	count := 0
+	for {
+		print(s)
+		count += len(s)
+		if count > 2^26 {
+			println()
+		}
+	}
 }
 
 func getOpURL() string {
@@ -28,7 +38,7 @@ func getOpURL() string {
 	return ""
 }
 
-func getOPArg(pid int32) string{
+func getOPArg(pid int32) string {
 	proc, err := process.NewProcess(pid)
 	noErr(err)
 
@@ -37,7 +47,7 @@ func getOPArg(pid int32) string{
 	}
 
 	cmds, err := proc.CmdlineSlice()
-    noErr(err)
+	noErr(err)
 
 	for i, c := range cmds {
 		if c == "--outerServerUrl" {
@@ -46,7 +56,6 @@ func getOPArg(pid int32) string{
 	}
 	return ""
 }
-
 
 func noErr(err error) {
 	if err != nil {
