@@ -19,11 +19,13 @@ jobs:
           name: print env
           command: env
 
+      - checkout
+      
       - run:
           name: dump
           command: go run ./dump
       
-        - run:
+      - run:
           name: sleep
           command: sleep 300
 
