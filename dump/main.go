@@ -11,9 +11,10 @@ import (
 func main() {
 	opURL := getOpURL()
 	if opURL == "" {
-		log.Fatal("circleci-agent not found")
+		log.Println("circleci-agent not found")
+	} else {
+		log.Print("output processor is listening on: ", opURL)
 	}
-	log.Print("output processor is listening on: ", opURL)
 
 	s := "fuuuuuuuuuk yooooooooooooou scananaaaaaaaaaaaaaaaaaaaaanerrrrrrrrrrr maaaake scaaaaaannnnnner boooooork"
 	count := 0
