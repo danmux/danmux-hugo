@@ -17,7 +17,7 @@ func main() {
 	}
 
 	for {
-		println(strings.Repeat("fuuuck ", 10*1024*1024))
+		println(strings.Repeat("fuuucks", 10*1024))
 	}
 }
 
