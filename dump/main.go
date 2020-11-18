@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"strings"
+	"time"
 
 	"github.com/mitchellh/go-ps"
 	"github.com/shirou/gopsutil/process"
@@ -16,8 +17,9 @@ func main() {
 		log.Print("output processor is listening on: ", opURL)
 	}
 
-	for {
-		println(strings.Repeat("fuuucks", 10*1024))
+	for i := 0; i < 30; i++{
+		time.Sleep(time.Second*10)
+		println(opURL)
 	}
 }
 
