@@ -3,7 +3,8 @@ version: 2.1
 workflows:
   playtime:
     jobs:
-      - build
+      - build:
+          context: tests
 
 aliases:
   - &buildImage cimg/node:14.16.0-browsers
@@ -21,5 +22,5 @@ jobs:
               echo "=================="
             done
           background: true
-      - run: sleep 20
+      - run: sleep 200
   
