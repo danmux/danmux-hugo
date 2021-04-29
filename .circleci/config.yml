@@ -16,7 +16,7 @@ jobs:
           command: export
 
       - run:
-          name: print env
+          name: print envs
           command: env
 
       - checkout
