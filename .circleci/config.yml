@@ -12,9 +12,19 @@ aliases:
 jobs:
   build:
     docker:
-      - image: *buildImage
+      - image: docker:stable-git
     steps:
       - run:
+          name: sample name
+          command: echo -n he; echo llo there
+      - run:
+          name: print env
+          command: env
+      - run:
+          name: print processes
+          command: ps -ef
+      - run:
+          name: Create some test results
           command: |
             while true; do
               sleep 2
