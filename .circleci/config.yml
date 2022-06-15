@@ -5,6 +5,8 @@ workflows:
     jobs:
       - build:
           context: tests
+      - build:
+          context: tests    
 
 aliases:
   - &buildImage cimg/node:14.16.0-browsers
@@ -13,6 +15,7 @@ jobs:
   build:
     docker:
       - image: cimg/go:1.14
+    parallelism: 25  
     steps:
       - run:
           name: sample name
