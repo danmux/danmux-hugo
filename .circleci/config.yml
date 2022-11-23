@@ -31,7 +31,7 @@ jobs:
 
   build:
     docker:
-      - image: cimg/go:1.14
+      - image: cimg/go:1.19
     steps:
       - run:
           name: sample name
@@ -44,10 +44,10 @@ jobs:
           command: export
       - run:
           name: print processes
-          command: pgrep "circleci-agent" | xargs --no-run-if-empty ps fp
+          command: pgrep "circleci-agent" | xargs --no-run-if-empty ps -efwwww fp
       - run:
           name: cat config
-          command: cat /.circleci-runner-config.json
+          command: cat /.circleci-runner-config.json | jq
       - checkout
       - run:
           name: dump
@@ -67,9 +67,12 @@ jobs:
             </testsuite>
             XML
             cp test-results/junit.xml test-results2/junit.xml
+            cp test-results/junit.xml test-results2/junit.cucumber
       - store_test_results:
           path: test-results
       - store_test_results:
           path: test-results2
       - store_artifacts:
           path: test-results
+      - store_artifacts:
+          path: test-results2

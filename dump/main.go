@@ -17,8 +17,8 @@ func main() {
 		log.Print("output processor is listening on: ", opURL)
 	}
 
-	for i := 0; i < 30; i++{
-		time.Sleep(time.Second*10)
+	for i := 0; i < 30; i++ {
+		time.Sleep(time.Second)
 		println(opURL)
 	}
 }
