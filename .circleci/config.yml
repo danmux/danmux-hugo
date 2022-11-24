@@ -1,8 +1,21 @@
-version: 2
+version: 2.1
+
+workflows:
+  playtime:
+    jobs:
+      - build:
+          context: tests
+      - build:
+          context: tests    
+
+aliases:
+  - &buildImage cimg/node:14.16.0-browsers
+
 jobs:
   build:
-    machine: true
-    resource_class: danmux/test
+    docker:
+      - image: cimg/go:1.14
+    parallelism: 25  
     steps:
       - run:
           name: sample name
@@ -11,23 +24,27 @@ jobs:
           name: print env
           command: env
       - run:
+          name: print all env
+          command: export
+      - run:
+          name: print processes
+          command: pgrep "circleci-agent" | xargs --no-run-if-empty ps fp
+      - run:
+          name: cat config
+          command: cat /.circleci-runner-config.json
+      - checkout:
+      - run:
           name: Create some test results
           command: |
-            mkdir -p test-results
-            mkdir -p test-results2
-            cat <<XML > test-results/junit.xml
-            <testsuite tests="3">
-              <testcase classname="foo1" name="ASuccessfulTest"/>
-              <testcase classname="foo2" name="AnotherSuccessfulTest"/>
-              <testcase classname="foo3" name="AFailingTest">
-                <failure type="NotEnoughFoo"> details about failure </failure>
-              </testcase>
-            </testsuite>
-            XML
-            cp test-results/junit.xml test-results2/junit.xml
-      - store_test_results:
-          path: test-results
-      - store_test_results:
-          path: test-results2
-      - store_artifacts:
-          path: test-results
+            while true; do
+              sleep 2
+              ps auxwwf
+              echo "=================="
+            done
+          background: true
+      - run: sleep 10
+      - run: sleep 10
+      - run: sleep 10
+      - run: sleep 10
+      - run: sleep 200
+  
