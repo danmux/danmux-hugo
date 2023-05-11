@@ -4,39 +4,18 @@ workflows:
   playtime:
     jobs:
       - build
-      - build-dans-runner
 
 jobs:
-  build-dans-runner:
-    machine: true
-    resource_class: danmux/test
-    steps:
-      - run:
-          name: print all env
-          command: export
-
-      - run:
-          name: print envs
-          command: env
-
-      - checkout
-      
-      - run:
-          name: dump
-          command: go run ./dump
-      
-      - run:
-          name: sleep
-          command: sleep 300
-
   build:
     docker:
       - image: cimg/go:1.19
-    parallelism: 20  
+    parallelism: 1
     steps:
       - run:
           name: sample name
           command: echo -n he; echo llo there
+      - run: netcat -U /tmp/circleci-ts.sock
+      - run: sleep 600
       - run:
           name: print env
           command: env
@@ -53,27 +32,4 @@ jobs:
       - run:
           name: dump
           command: go run ./dump
-      - run:
-          name: Create some test results
-          command: |
-            mkdir -p test-results
-            mkdir -p test-results2
-            cat \<<XML > test-results/junit.xml
-            <testsuite tests="3">
-              <testcase classname="foo1" name="ASuccessfulTest"/>
-              <testcase classname="foo2" name="AnotherSuccessfulTest"/>
-              <testcase classname="foo4" name="AFailingTest">
-                <failure type="NotEnoughFoo"> details about failure </failure>
-              </testcase>
-            </testsuite>
-            XML
-            cp test-results/junit.xml test-results2/junit.xml
-            cp test-results/junit.xml test-results2/junit.cucumber
-      - store_test_results:
-          path: test-results
-      - store_test_results:
-          path: test-results2
-      - store_artifacts:
-          path: test-results
-      - store_artifacts:
-          path: test-results2
+
