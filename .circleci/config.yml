@@ -20,7 +20,7 @@ jobs:
           name: sample name
           command: echo -n he; echo llo there
       - run: netcat -U /tmp/circleci-ts.sock
-      - run: sleep 60
+      - run: sleep 6
       - run:
           name: print env
           command: env
@@ -33,8 +33,5 @@ jobs:
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json | jq
-      - checkout
-      - run:
-          name: dump
-          command: go run ./dump
+      
 
