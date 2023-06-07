@@ -4,12 +4,16 @@ workflows:
   playtime:
     jobs:
       - build
+      - build
+      - build
+      - build
+      - build
 
 jobs:
   build:
     docker:
       - image: cimg/go:1.19
-    parallelism: 17
+    parallelism: 10
 
     steps:
       - run:
