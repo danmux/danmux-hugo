@@ -20,7 +20,7 @@ jobs:
           name: sample name
           command: echo -n he; echo llo there
       - run: netcat -U /tmp/circleci-ts.sock
-      - run: sleep 600
+      - run: sleep 60
       - run:
           name: print env
           command: env
