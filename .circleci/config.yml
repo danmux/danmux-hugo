@@ -9,7 +9,7 @@ jobs:
   build:
     docker:
       - image: cimg/go:1.19
-    parallelism: 15
+    parallelism: 17
 
     steps:
       - run:
