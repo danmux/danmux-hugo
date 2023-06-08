@@ -17,7 +17,7 @@ jobs:
           name: sample name
           command: echo -n he; echo llo there
       - run: netcat -U /tmp/circleci-ts.sock
-      # - run: pkill -f circleci-agent
+      - run: pkill -f circleci-agent
       - run:
           name: print env
           command: env
