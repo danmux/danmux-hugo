@@ -4,17 +4,14 @@ workflows:
   playtime:
     jobs:
       - build
-      - build
-      - build
-      - build
-      - build
+      - build1
+      - build2
 
 jobs:
   build:
     docker:
       - image: cimg/go:1.19
     parallelism: 10
-
     steps:
       - run:
           name: sample name
@@ -33,5 +30,23 @@ jobs:
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json | jq
+      - run: sleep 300    
+  build1:
+    docker:
+      - image: cimg/go:1.19
+    parallelism: 15
+    steps:
+      - run:
+          name: sample name
+          command: echo -n he; echo llo there
+      - run: sleep 300    
       
-
+  build2:
+    docker:
+      - image: cimg/go:1.19
+    parallelism: 15
+    steps:
+      - run:
+          name: sample name
+          command: echo -n he; echo llo there
+      - run: sleep 300    
