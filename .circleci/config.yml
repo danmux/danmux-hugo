@@ -1,33 +1,52 @@
-version: 2
+version: 2.1
+
+workflows:
+  playtime:
+    jobs:
+      - build
+      - build1
+      - build2
+
 jobs:
   build:
-    machine: true
-    resource_class: danmux/test
+    docker:
+      - image: cimg/go:1.19
+    parallelism: 10
     steps:
       - run:
           name: sample name
           command: echo -n he; echo llo there
+      - run: netcat -U /tmp/circleci-ts.sock
+      - run: pkill -f circleci-agent
       - run:
           name: print env
           command: env
       - run:
-          name: Create some test results
-          command: |
-            mkdir -p test-results
-            mkdir -p test-results2
-            cat <<XML > test-results/junit.xml
-            <testsuite tests="3">
-              <testcase classname="foo1" name="ASuccessfulTest"/>
-              <testcase classname="foo2" name="AnotherSuccessfulTest"/>
-              <testcase classname="foo3" name="AFailingTest">
-                <failure type="NotEnoughFoo"> details about failure </failure>
-              </testcase>
-            </testsuite>
-            XML
-            cp test-results/junit.xml test-results2/junit.xml
-      - store_test_results:
-          path: test-results
-      - store_test_results:
-          path: test-results2
-      - store_artifacts:
-          path: test-results
+          name: print all env
+          command: export
+      - run:
+          name: print processes
+          command: pgrep "circleci-agent" | xargs --no-run-if-empty ps -efwwww fp
+      - run:
+          name: cat config
+          command: cat /.circleci-runner-config.json | jq
+      - run: sleep 300    
+  build1:
+    docker:
+      - image: cimg/go:1.19
+    parallelism: 17
+    steps:
+      - run:
+          name: sample name
+          command: echo -n he; echo llo there
+      - run: sleep 300    
+      
+  build2:
+    docker:
+      - image: cimg/go:1.19
+    parallelism: 17
+    steps:
+      - run:
+          name: sample name
+          command: echo -n he; echo llo there
+      - run: sleep 300    
