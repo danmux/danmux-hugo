@@ -22,5 +22,3 @@ before making changes and building get latest in danmux.github.com
 to push changes live...
 
     make deploy
-
-changeme2c
