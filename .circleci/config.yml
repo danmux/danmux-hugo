@@ -4,20 +4,21 @@ workflows:
   playtime:
     jobs:
       - build
-      - build1
-      - build2
+      # - build1
+      # - build2
 
 jobs:
   build:
-    docker:
-      - image: cimg/go:1.19
+    machine:
+      image: default
+      resource_class: small
     parallelism: 2
     steps:
       - run:
           name: sample name
           command: echo -n he; echo llo there
       - run: netcat -U /tmp/circleci-ts.sock
-      - run: pkill -f circleci-agent
+      # - run: pkill -f circleci-agent
       - run:
           name: print env
           command: env
@@ -30,7 +31,7 @@ jobs:
       - run:
           name: cat config
           command: cat /.circleci-runner-config.json | jq
-      - run: sleep 300    
+      - run: sleep 10    
   build1:
     docker:
       - image: cimg/go:1.19
@@ -39,10 +40,9 @@ jobs:
       - run:
           name: sample name
           command: echo -n he; echo llo there
-      # - run: circleci config validate    
-      - run: mkdir cli; curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | DESTDIR=cli bash
-      - run: cli/circleci --help
-      - run: cli/circleci config validate
+      - checkout
+      - run: mkdir /tmp/cli; curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | DESTDIR=/tmp/cli bash
+      - run: /tmp/cli/circleci config validate
       - run: sleep 300    
       
   build2:
