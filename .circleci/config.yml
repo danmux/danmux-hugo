@@ -40,9 +40,9 @@ jobs:
           name: sample name
           command: echo -n he; echo llo there
       # - run: circleci config validate    
-      - run: curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | DESTDIR=/opt/bin bash
-      - run: /opt/bin/circleci --help
-      - run: /opt/bin/circleci config validate
+      - run: curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | DESTDIR=. bash
+      - run: ./circleci --help
+      - run: ./circleci config validate
       - run: sleep 300    
       
   build2:
