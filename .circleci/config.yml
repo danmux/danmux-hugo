@@ -11,7 +11,7 @@ jobs:
   build:
     docker:
       - image: cimg/go:1.19
-    parallelism: 10
+    parallelism: 2
     steps:
       - run:
           name: sample name
@@ -34,17 +34,21 @@ jobs:
   build1:
     docker:
       - image: cimg/go:1.19
-    parallelism: 17
+    parallelism: 2
     steps:
       - run:
           name: sample name
           command: echo -n he; echo llo there
+      - run: circleci config validate    
+      - run: curl -fLSs https://raw.githubusercontent.com/CircleCI-Public/circleci-cli/master/install.sh | bash
+      - run: circleci --help
+      - run: circleci config validate
       - run: sleep 300    
       
   build2:
     docker:
       - image: cimg/go:1.19
-    parallelism: 17
+    parallelism: 2
     steps:
       - run:
           name: sample name
